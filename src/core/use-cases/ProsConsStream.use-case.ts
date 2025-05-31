@@ -1,5 +1,3 @@
-import { type ProsCons } from '../../interfaces'
-
 export const ProsConsStreamUseCase = async (prompt: string) => {
   try {
     const resp = await fetch(`${import.meta.env.VITE_GPT_API}/pros-cons-discusser-stream`, {
