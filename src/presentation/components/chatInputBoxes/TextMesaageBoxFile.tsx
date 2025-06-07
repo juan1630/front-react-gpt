@@ -37,7 +37,7 @@ export function TextMesaageBoxFile({
         >
           <i className="fa-solid fa-paperclip text-xl"></i>
         </button>
-        <input type="file" accept={accept} ref={inputFileRef} onChange={ (e) => setselectedFile(e.target.files?.item(0)) } hidden />
+        <input type="file" accept={accept} ref={inputFileRef} onChange={ (e) => setselectedFile(e.target?.files!.item(0)) } hidden />
       </div>
       <div className="flex grow h-2">
         <div className="relative w-full">

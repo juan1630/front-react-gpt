@@ -23,7 +23,7 @@ export function TextMesaageBox({
       onSubmit={handleSendMessage}
       className="flex flex-row h-10 rounded-xl bg-white w-full px-4"
     >
-      <div className="flex grow h-2">
+      <div className="">
         <div className="relative w-full">
           <input
             type="text"
@@ -38,7 +38,7 @@ export function TextMesaageBox({
             onChange={(e) => setmessage(e.target.value)}
           />
         </div>
-        <div className="ml-4 h-3">
+        <div className="">
           <button className="btn-primary flex align-center justify-center">
             <span className="mr-2"> Enviar</span>
             <i className="fa-regular fa-paper-plane"></i>
