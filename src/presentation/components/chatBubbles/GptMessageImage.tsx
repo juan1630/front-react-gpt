@@ -1,9 +1,9 @@
-interface Props  {
-    text: string
-    imageUrl:string
-    imageAlt:string
+interface Props {
+  text: string;
+  imageUrl: string;
+  imageAlt: string;
 }
-export function GptMessageImage({text, imageAlt, imageUrl}: Props) {
+export function GptMessageImage({ text, imageAlt, imageUrl }: Props) {
   return (
     <div className="col-start-1 col-end-9 p-3 rounded-lg">
       <div className="flex flex-row items-start">
@@ -14,10 +14,14 @@ export function GptMessageImage({text, imageAlt, imageUrl}: Props) {
           J
         </div>
         <div className="flex flex-col justify-center align-middle">
-                  <span>{text}</span>
-        <img src={imageUrl} alt={imageAlt} className="mt-1 rounded-xl w-96 object-cover" />
+          <span>{text}</span>
+          <img
+            src={imageUrl}
+            alt={imageAlt}
+            className="mt-1 rounded-xl w-96 object-cover"
+          />
         </div>
       </div>
-    </div> 
-  )
+    </div>
+  );
 }

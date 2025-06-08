@@ -22,6 +22,8 @@ export default function ImageGenerationPage() {
   const [messages, setMessages] = useState<Messages[]>([]);
 
   const handlePost = async (text: string) => {
+
+    if(text.trim().length == 0 ) return
     setIsLoading(true);
 
     setMessages((prev) => [...prev, { text, isGpt: false }]);
@@ -43,7 +45,7 @@ export default function ImageGenerationPage() {
 
   return (
     <div className="chat-container">
-      <div className="chat-messages">
+      <div className="chat-messages" style={{maxHeight: '580px'}} >
         <div className="grid grid-cols-12 gap-y-2">
           {/* Bienvenido */}
           <GptMessage text="¿Qué imagen deseas genear hoy?" />
