@@ -27,8 +27,7 @@ export default function ImageTunningPage() {
       isGpt: true,
       text: "Imagen base",
       info: {
-        imageUrl:
-          "http://localhost:3000/gpt/image-generation/1749336103210.png",
+        imageUrl:"http://localhost:3000/gpt/image-generation/1749411677540.png",
         alt: "imagen base",
       },
     },
@@ -60,7 +59,6 @@ export default function ImageTunningPage() {
     setIsLoading(true);
 
     setMessages((prev) => [...prev, { text, isGpt: false }]);
-    //todo: use case
 
     const { mask, original } = originalImageAndMask
     const imageInfo = await ImageGenerationUseCase({
@@ -91,7 +89,8 @@ export default function ImageTunningPage() {
   return (
     <>
       {originalImageAndMask.original && (
-        <div className="fixed flex flex-col items-center top-10 fade-in">
+        <div style={{ position: 'absolute', right:'150px' , top:'80px' }} 
+          className="fixed flex flex-col items-center top-10 fade-in">
           <span>Editando</span>
           <img
             src={originalImageAndMask.mask && originalImageAndMask.original}
